@@ -50,12 +50,11 @@
   border-radius: 100%;
   box-shadow: 0 2px 5px rgba(black, .15);
 
-  &:hover {
+  &:hover,&:focus,&:active {
 
     .icon-marker-tooltip {
       display: block;
     }
-    animation-play-state: paused;
 
   }
 
@@ -72,7 +71,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: .4em;
   margin-bottom: 1em;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
   color: black;
 
   &:before {
@@ -81,11 +80,8 @@
     bottom: -1.7em;
     left: calc(50% - 5px);
     content: "";
-    width: 0em;
-    height: 0em;
     border: 10px solid transparent;
     border-top-color: rgba(255, 255, 255, 0.8);
-    // transform: rotate(45deg);
     margin-left: -.7em;
   }
 
@@ -122,49 +118,50 @@
 .high-risk{
   background: rgba(255, 0, 0, 0.8);
   border-color: #ff0000;
+  &:hover,&:focus{
+    background: rgb(255, 0, 0);
+  }
 }
 .morderate-risk{
   background: rgba(252, 48, 48, 0.8);
   border-color: #fc3030;
+  &:hover,&:focus{
+    background: rgb(252, 48, 48);
+  }
 }
 .average-risk{
   background: rgba(252, 237, 36, 0.8);
   border-color: #fced24;
+  &:hover,&:focus{
+    background: rgb(252, 237, 36);
+  }
   color:black;
 }
 .low-risk{
   background: rgba(1, 136, 12, 0.8);
   border-color: #01880c;
+  &:hover,&:focus{
+    background: rgb(1, 136, 12);
+  }
 }
 span{
   color:white;
   font-weight: normal;
+  .info{
+    display: inline-block;
+    color: #0080f8!important;
+  }
+  .safe{
+    display: inline-block;
+    color: #02b83e!important;
+  }
+  .danger{
+    display: inline-block;
+    color: #ce0000!important; 
+  }
+  .bold{
+    font-weight: 900;
+  }
 }
-.high-risk:hover{
-  background: rgb(255, 0, 0);
-}
-.morderate-risk:hover{
-  background: rgb(252, 48, 48);
-}
-.average-risk:hover{
-  background: rgb(252, 237, 36);
-}
-.low-risk:hover{
-  background: rgb(1, 136, 12);
-}
-.bold{
-  font-weight: 900;
-}
-span.info{
-  display: inline-block;
-  color: #0080f8!important;
-}
-span.safe{
-  display: inline-block;
-  color: #02b83e!important;
-}
-span.danger{
-  display: inline-block;
-  color: #ce0000!important; 
-}
+
 

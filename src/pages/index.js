@@ -130,11 +130,19 @@ const IndexPage = () => {
             html
           }),
           riseOnHover: true
-        });
+        })
       }
     });
 
     geoJsonLayers.addTo(map)
+    document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchstart',function(event){
+        this.querySelector('.icon-marker-tooltip').style.display = "block"
+      })
+    )
+    document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchend',function(event){
+        this.querySelector('.icon-marker-tooltip').style.display = "none"
+      })
+    )
   }
 
   const mapSettings = {
