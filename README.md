@@ -1,5 +1,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/93831668-ab47-44ac-a663-9cb8fbdf85cf/deploy-status)](https://app.netlify.com/sites/covid19-maps/deploys)
-[Demo](https://covid19-maps.netlify.com)
+* Click here for [Demo](https://covid19-maps.netlify.com)
 
 # 🍃 Gatsby Leaflet Starter
 
