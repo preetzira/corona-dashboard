@@ -136,7 +136,7 @@ const IndexPage = () => {
 
     geoJsonLayers.addTo(map)
     document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchstart',function(event){
-        this.querySelector('.icon-marker-tooltip').style.display = "block"
+        this.querySelector('.icon-marker-tooltip').style.display = "flex"
       })
     )
     document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchend',function(event){
