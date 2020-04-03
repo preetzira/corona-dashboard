@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/93831668-ab47-44ac-a663-9cb8fbdf85cf/deploy-status)](https://app.netlify.com/sites/covid19-maps/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1b42cd13-57fe-4782-8442-dc0803bdf5f6/deploy-status)](https://app.netlify.com/sites/covid19-maps/deploys)
 
 Click here for [Demo](https://covid19-maps.netlify.com)
 
