@@ -135,12 +135,14 @@ const IndexPage = () => {
     });
 
     geoJsonLayers.addTo(map)
-    document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchstart',function(event){
-        this.querySelector('.icon-marker-tooltip').style.display = "flex"
+    document.querySelectorAll('.icon').forEach(elem=>elem.querySelector('.icon-marker').addEventListener('touchstart',function(event){
+        this.querySelector('.icon-marker-tooltip').style.display = "block"
+        this.querySelector('.icon-marker-tooltip').style.left = "-335%"
       })
     )
-    document.querySelectorAll('.icon').forEach(elem=>elem.addEventListener('touchend',function(event){
+    document.querySelectorAll('.icon').forEach(elem=>elem.querySelector('.icon-marker').addEventListener('touchend',function(event){
         this.querySelector('.icon-marker-tooltip').style.display = "none"
+        this.querySelector('.icon-marker-tooltip').style.left = ""
       })
     )
   }
