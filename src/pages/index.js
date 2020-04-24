@@ -14,7 +14,7 @@ const DEFAULT_ZOOM = 2;
 
 
 const IndexPage = () => {
-  
+
   /**
    * mapEffect
    * @description Fires a callback once the page renders
@@ -22,10 +22,10 @@ const IndexPage = () => {
    */
   async function mapEffect({ leafletElement: map } = {}) {
     if ( !map ) return;
-    
+
     let response;
     try {
-      const responseData = await fetch('https://corona.lmao.ninja/countries');
+      const responseData = await fetch('https://corona.lmao.ninja/v2/countries');
       response = await responseData.json()
     } catch(e) {
       console.log(`Failed to fetch countries: ${e.message}`, e);
@@ -58,7 +58,7 @@ const IndexPage = () => {
       pointToLayer: (feature = {}, latlng) => {
         const { properties = {} } = feature;
         let updatedFormatted, casesString, casesCondition;
-    
+
         const {
           country,
           updated,
@@ -86,11 +86,11 @@ const IndexPage = () => {
         if ( cases > 1000 ) {
           casesString = `${casesString.slice(0, -3)}k+`
         }
-    
+
         if ( updated ) {
           updatedFormatted = new Date(updated).toLocaleString();
         }
-    
+
         const html = `
           <span class="icon-marker ${casesCondition}-risk">
             <span class="icon-marker-tooltip">
@@ -123,7 +123,7 @@ const IndexPage = () => {
             ${ casesString }
           </span>
         `;
-    
+
         return L.marker( latlng, {
           icon: L.divIcon({
             className: "icon",
