@@ -87,11 +87,11 @@ const IndexPage = () => {
           casesString = `${cases/1000}k+`
         }
         if ( cases > 1000000 ) {
-          casesString = `${cases/1000000}M+`
+          casesString = `${parseFloat(cases/1000000).toFixed(2)}M+`
         }
         
         if ( cases > 1000000000 ) {
-          casesString = `${cases/1000000000}B+`
+          casesString = `${parseFloat(cases/1000000000).toFixed(1)}B+`
         }
 
         if ( updated ) {
