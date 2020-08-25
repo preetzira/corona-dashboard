@@ -84,7 +84,7 @@ const IndexPage = () => {
           casesCondition = "low";
         }
         if ( cases > 1000 ) {
-          casesString = `${cases/1000}k+`
+          casesString = `${parseFloat(cases/1000).toFixed(2)}k+`
         }
         if ( cases > 1000000 ) {
           casesString = `${parseFloat(cases/1000000).toFixed(2)}M+`
