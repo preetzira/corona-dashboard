@@ -69,11 +69,12 @@
   font-size: 1.4em;
   left: -335%;
   padding: 1em;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, .5);
   border-radius: .4em;
   margin-bottom: 1em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
   color: black;
+  backdrop-filter:blur(5px);
 
   &:before {
     display: block;
@@ -82,8 +83,9 @@
     left: calc(50% - 5px);
     content: "";
     border: 10px solid transparent;
-    border-top-color: rgba(255, 255, 255, 0.8);
+    border-top-color: rgba(255, 255, 255, 0.5);
     margin-left: -.7em;
+    backdrop-filter:blur(5px);
   }
 
   h2 {
